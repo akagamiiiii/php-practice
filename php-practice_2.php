@@ -88,13 +88,13 @@
     
     $ageList = [25, 30, 18];
     
-    foreach($personalInfos as $index => $value){
-        $personalInfos[$index]["age"] = $ageList[$index];
-    }
-    
-    // foreach($ageList as $index => $value){
-    //     $personalInfos[$index]["age"] = $value;
+    // foreach($personalInfos as $index => $value){
+    //     $personalInfos[$index]["age"] = $ageList[$index];
     // }
+    
+    foreach($ageList as $index => $value){
+        $personalInfos[$index]["age"] = $value;
+    }
     
     var_dump($personalInfos);
     

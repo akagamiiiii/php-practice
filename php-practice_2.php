@@ -2,11 +2,11 @@
 // Q1 tic-tac問題
 <?php
     for($i = 1; $i <= 100; $i++){
-        if($i % 4 == 0 and $i % 5 == 0){
+        if($i % 4 === 0 and $i % 5 === 0){
             echo "tic-tac". "\n";
-        }elseif($i % 4 == 0){
+        }elseif($i % 4 === 0){
             echo "tic". "\n";
-        }elseif($i % 5 == 0){
+        }elseif($i % 5 === 0){
             echo "tac". "\n";
         }else{
             echo $i. "\n";
@@ -120,7 +120,7 @@
     }
 }
 
-$makoto = new Student("1", "まこと");
+$makoto = new Student(1, "まこと");
 
 echo "学籍番号". $makoto->studentId. "番の生徒は". $makoto->studentName. "です。";
 ?>
@@ -167,9 +167,7 @@ $yamada->attend('PHP');
     $now = new DateTime();
     $time = new DateTime("1992/04/25");
     
-    $diff = $now->diff($time);
-    
-    echo "あの日から". $diff->format("%a日"). "経過しました。";
+    echo "あの日から". $time->diff($now)->format("%a日"). "経過しました。";
 ?>
 
 ?>
